@@ -4,5 +4,6 @@ export namespace RelevanceBetweenUsersRepository {
     frequencyOfLikes: number;
     frequencyOfStoriesViews: number;
     frequencyOfSentMessages: number;
+    arithmeticMeanFrequency: number;
   };
 }

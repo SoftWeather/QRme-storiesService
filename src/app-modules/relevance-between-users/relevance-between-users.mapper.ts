@@ -10,6 +10,7 @@ export class RelevanceBetweenUsersMapper {
     frequencyOfLikes?: number,
     frequencyOfStoriesViews?: number,
     frequencyOfSentMessages?: number,
+    arithmeticMeanFrequency?: number,
   ): RelevanceBetweenUsers {
     return new RelevanceBetweenUsers(
       creator,
@@ -19,6 +20,7 @@ export class RelevanceBetweenUsersMapper {
       frequencyOfLikes,
       frequencyOfStoriesViews,
       frequencyOfSentMessages,
+      arithmeticMeanFrequency,
     );
   }
 }

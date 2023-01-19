@@ -21,6 +21,7 @@ export class RelevanceBetweenUsers extends BaseEntity<RelevanceBetweenUsers> {
     private readonly _frequencyOfLikes: number,
     private readonly _frequencyOfStoriesViews: number,
     private readonly _frequencyOfSentMessages: number,
+    private readonly _arithmeticMeanFrequency: number,
   ) {
     super(_creator, _creator);
 
@@ -28,6 +29,7 @@ export class RelevanceBetweenUsers extends BaseEntity<RelevanceBetweenUsers> {
     this.frequencyOfReactions = _frequencyOfReactions;
     this.frequencyOfSentMessages = _frequencyOfSentMessages;
     this.frequencyOfStoriesViews = _frequencyOfStoriesViews;
+    this.arithmeticMeanFrequency = _arithmeticMeanFrequency;
     this.userFrom = _userFrom;
     this.userTo = _userTo;
   }
@@ -43,6 +45,9 @@ export class RelevanceBetweenUsers extends BaseEntity<RelevanceBetweenUsers> {
 
   @Column({ nullable: false, default: 0 })
   frequencyOfSentMessages: number;
+
+  @Column({ type: 'float', nullable: false, default: 0 })
+  arithmeticMeanFrequency: number;
 
   @ManyToOne(() => User, {
     nullable: false,

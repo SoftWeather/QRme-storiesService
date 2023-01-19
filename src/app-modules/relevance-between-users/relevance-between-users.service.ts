@@ -43,6 +43,7 @@ export class RelevanceBetweenUsersService {
       frequencyOfLikes,
       frequencyOfStoriesViews,
       frequencyOfSentMessages,
+      arithmeticMeanFrequency,
     }: AllFrequency = await this._frequencyService.getAllFrequency(
       userFromId,
       userToId,
@@ -56,6 +57,7 @@ export class RelevanceBetweenUsersService {
       frequencyOfLikes,
       frequencyOfStoriesViews,
       frequencyOfSentMessages,
+      arithmeticMeanFrequency,
     );
 
     try {

@@ -89,6 +89,7 @@ export class FrequencyService {
       frequencyOfLikes: undefined,
       frequencyOfStoriesViews: undefined,
       frequencyOfSentMessages: undefined,
+      arithmeticMeanFrequency: undefined,
     };
 
     [
@@ -102,6 +103,13 @@ export class FrequencyService {
       this._getFrequencyOfStoriesViews(userFromId, userToId),
       this._getFrequencyOfSentMessages(userFromId, userToId),
     ]);
+
+    allFrequency.arithmeticMeanFrequency =
+      (allFrequency.frequencyOfReactions +
+        allFrequency.frequencyOfLikes +
+        allFrequency.frequencyOfStoriesViews +
+        allFrequency.frequencyOfSentMessages) /
+      4;
 
     return allFrequency;
   }
